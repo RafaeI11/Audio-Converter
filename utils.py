@@ -96,7 +96,7 @@ def resource_path(relative_path: str) -> str:
     return os.path.join(base_path, relative_path)
 
 
-def display_img(img: str, size=(100, 100)) -> ImageTk.PhotoImage:
+def display_img(img: str, size: tuple = (100, 100)) -> ImageTk.PhotoImage:
     displayed_img = Image.open(img)
     displayed_img = displayed_img.resize(size, Image.ANTIALIAS)
     displayed_img = ImageTk.PhotoImage(displayed_img)
